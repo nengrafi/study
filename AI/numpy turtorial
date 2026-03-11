@@ -1,1 +1,83 @@
+#number of dimensions
+a.ndim
+arr = np.array([1,2,3,4], ndmin = 5)
 
+#slicing
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+print(arr[1:5:2])
+[2 4]
+
+#data type
+arr.dtype
+
+#copy, view
+copy : 복사
+view : 원본과 연결
+base : 원본 확인
+
+#shape
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+print(arr.shape)
+(2,4)
+type : tuple
+
+#reshape
+차원 재배열
+newarr = arr.reshape(2, 2, -1)
+-1은 차원 자동배열
+
+#flatten
+arr.reshape(-1)
+
+#array of zeros
+np.zeros(shape[, dtype, order, device, like]) 
+
+#메모리 크기
+arr.nbytes
+
+#정렬
+arr = np.arange([start,] stop[, step,][, dtype, ...])
+
+#len(arr)은 행을 기준
+
+#random
+np.random.random((shape)) : 0~1 사이의 실수값
+shape는 튜플
+np.random.rand() : 0~1 사이의 실수값
+shape는 쉼표로 전달
+np.random.randint() : 정수 랜덤값 생성
+np.random.randn() : 정규분포 랜덤값 (쉼표로 전달)
+np.random.uniform(low, high, size) : 균등 분포에서 난수 생성
+
+#경계제외 0으로 바꾸기
+arr[1:-1,1:-1] = 0
+
+#차원좌표 변환
+np.unravel_index()	: 1D index → 다차원 좌표
+np.ravel_multi_index()	: 다차원 좌표 → 1D index
+
+#np.dot : 내적
+
+#arr[(arr>3) & arr(arr<8)] *= -1 : 조건을 []안에 넣을 수 있음
+
+#axis
+0 : 세로
+1 : 가로
+-1 : 마지막
+
+#반올림
+np.abs : 절댓값
+np.ceil : 올림
+np.floor : 내림
+np.copysign : 부호복원
+np.round : 반올림
+np.trunc : 소수버림
+
+#np.intersect1d : 공통원소 찾기
+
+#out : 새로 생성 X, 기존거에 유지
+
+#np.fromiter(iterable, dtype, count=-1) : 반복처리 배열, -1은 모든요소
+
+#np.linspace(start, stop, num, endpoint) : 
